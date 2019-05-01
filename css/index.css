@@ -127,19 +127,6 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-footer {
-  width: 100%;
-}
-@media only screen and (min-width: 500px) and (max-width: 959px) {
-  footer {
-    width: 768px;
-  }
-}
-@media only screen and (min-width: 960px) and (max-width: 1199px) {
-  footer {
-    width: 940px;
-  }
-}
 /* color scheme 
 Are ya yellow: #feda6a
 
@@ -151,12 +138,17 @@ Dark Slate: #1d1e22 */
 * {
   box-sizing: border-box;
   font-family: 'EB Garamond', serif;
+  background: #1d1e22;
 }
 html,
 body {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+main .nav {
+  display: flex;
+  justify-content: space-evenly;
 }
 main a {
   text-decoration: none;
@@ -168,10 +160,13 @@ main .jumbotron {
 main .jumbotron img {
   width: 400px;
   height: 400px;
+  margin-top: 1rem;
 }
 main .jumbotron h1,
 main .jumbotron p {
+  background-color: #393f4d;
   color: #d4d4dc;
+  margin-top: 1rem;
 }
 main .jumbotron h1:hover,
 main .jumbotron p:hover {
@@ -180,11 +175,19 @@ main .jumbotron p:hover {
 main .jumbotron .btn {
   background-color: #feda6a;
   border: none;
+  margin-top: 1.5rem;
   color: #393f4d;
 }
 main .jumbotron .btn:hover {
   border: 3px solid #d4d4dc;
 }
 main #article {
-  border: 1px solid red;
+  background: #1d1e22;
+  color: #d4d4dc;
+}
+@media (min-width: 500px) {
+  main #article {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

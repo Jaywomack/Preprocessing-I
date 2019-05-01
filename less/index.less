@@ -138,17 +138,7 @@ table {
 /* Set every element's box-sizing to border-box */
 
 //media query variables
-@desktop:   ~"only screen and (min-width: 960px) and (max-width: 1199px)";
-@tablet:    ~"only screen and (min-width: 500px) and (max-width: 959px)";
-footer{
-    width: 100%;
-    @media @tablet {
-        width: 768px;
-    }
-    @media @desktop {
-        width: 940px;
-    }
-}
+
 
 
 /* color scheme 
@@ -165,6 +155,7 @@ Dark Slate: #1d1e22 */
 @background-color2: #393f4d;
 @nav-color:#feda6a;
 @button-color: #feda6a;
+@about-me-color: #d4d4dc;
 
 //sizing
 @img-width: 400px;
@@ -192,6 +183,7 @@ Dark Slate: #1d1e22 */
 * {
 	box-sizing: border-box;
 	font-family: 'EB Garamond', serif;
+	background: @background-color;
 	
 
 }
@@ -208,6 +200,8 @@ body {
 
 main {
 	.nav {
+		display: flex;
+		justify-content: space-evenly;
 
 	}
 	a {
@@ -219,16 +213,20 @@ main {
 		img {
 			width: @img-width;
 			height: @img-height;
+			margin-top: 1rem;
 			
 		}
 		h1, p {
+			background-color: @background-color2;
 			color:@main-header-text;
 			.my-hover-mixin2();
-			
+			margin-top: 1rem;
+
 		}
 		.btn {
 			background-color: @button-color;
 			border: none;
+			margin-top: 1.5rem;
 			color: @background-color2;
 			.my-hover-mixin();
 		}
@@ -237,10 +235,18 @@ main {
 	}
 
 	#article {
-		border: 1px solid red;
+		background: @background-color;
+		color: @about-me-color;
+		
+		@media (min-width: 500px){
+			display: flex;
+			flex-wrap: wrap;
+			
+		}
+
+		
 	}
 	
 
 	
 
-}
