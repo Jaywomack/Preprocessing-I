@@ -127,14 +127,64 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+footer {
+  width: 100%;
+}
+@media only screen and (min-width: 500px) and (max-width: 959px) {
+  footer {
+    width: 768px;
+  }
+}
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+  footer {
+    width: 940px;
+  }
+}
+/* color scheme 
+Are ya yellow: #feda6a
+
+Silver Fox: #d4d4dc
+
+Deep Matte Grey: #393f4d
+
+Dark Slate: #1d1e22 */
 * {
   box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
 }
 html,
 body {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
-img {
+main a {
+  text-decoration: none;
+  color: #feda6a;
+}
+main .jumbotron {
+  background-color: #393f4d;
+}
+main .jumbotron img {
   width: 400px;
   height: 400px;
+}
+main .jumbotron h1,
+main .jumbotron p {
+  color: #d4d4dc;
+}
+main .jumbotron h1:hover,
+main .jumbotron p:hover {
+  color: #feda6a;
+}
+main .jumbotron .btn {
+  background-color: #feda6a;
+  border: none;
+  color: #393f4d;
+}
+main .jumbotron .btn:hover {
+  border: 3px solid #d4d4dc;
+}
+main #article {
+  border: 1px solid red;
 }
