@@ -153,7 +153,7 @@ Dark Slate: #1d1e22 */
 // Color scheme
 @background-color: #1d1e22;
 @background-color2: #393f4d;
-@nav-color:#feda6a;
+@nav-color: #feda6a;
 @button-color: #feda6a;
 @about-me-color: #d4d4dc;
 
@@ -162,21 +162,22 @@ Dark Slate: #1d1e22 */
 @img-height: 400px;
 
 //header colors
-@main-header-text: #d4d4dc ;
+@main-header-text: #d4d4dc;
 @common-header-text: #393f4d;
 
 //mix-ins
 .my-hover-mixin() {
 	&:hover {
-	  border: 3px solid @main-header-text;
+		border: 3px solid @main-header-text;
 	}
-  }
-  .my-hover-mixin2() {
+}
+
+.my-hover-mixin2() {
 	&:hover {
-	  color: @button-color;
+		color: @button-color;
 	}
-  }
-  
+}
+
 
 
 
@@ -184,7 +185,7 @@ Dark Slate: #1d1e22 */
 	box-sizing: border-box;
 	font-family: 'EB Garamond', serif;
 	background: @background-color;
-	
+
 
 }
 
@@ -193,7 +194,7 @@ body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	
+
 }
 
 
@@ -204,25 +205,31 @@ main {
 		justify-content: space-evenly;
 
 	}
+
 	a {
 		text-decoration: none;
 		color: @nav-color;
 	}
+
 	.jumbotron {
-		background-color:@background-color2;
+		background-color: @background-color2;
+
 		img {
 			width: @img-width;
 			height: @img-height;
 			margin-top: 1rem;
-			
+
 		}
-		h1, p {
+
+		h1,
+		p {
 			background-color: @background-color2;
-			color:@main-header-text;
+			color: @main-header-text;
 			.my-hover-mixin2();
 			margin-top: 1rem;
 
 		}
+
 		.btn {
 			background-color: @button-color;
 			border: none;
@@ -237,16 +244,20 @@ main {
 	#article {
 		background: @background-color;
 		color: @about-me-color;
-		
-		@media (min-width: 500px){
-			display: flex;
-			flex-wrap: wrap;
-			
-		}
 
-		
 	}
-	
 
-	
+	ul #li-top {
+		color: @button-color;
+	}
 
+	.list-group .list-group-item {
+		background-color: @background-color2;
+		.my-hover-mixin2();
+	}
+
+	  #work-history-header {
+		color: @main-header-text;
+	}
+
+}
