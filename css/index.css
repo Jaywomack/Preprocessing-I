@@ -1,1 +1,199 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+/* color scheme 
+Are ya yellow: #feda6a
+
+Silver Fox: #d4d4dc
+
+Deep Matte Grey: #393f4d
+
+Dark Slate: #1d1e22 */
+* {
+  box-sizing: border-box;
+  font-family: 'EB Garamond', serif;
+  background: #1d1e22;
+}
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main .nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+main a {
+  text-decoration: none;
+  color: #feda6a;
+}
+main .jumbotron {
+  background-color: #393f4d;
+}
+main .jumbotron img {
+  width: 400px;
+  height: 400px;
+  margin-top: 1rem;
+}
+main .jumbotron h1,
+main .jumbotron p {
+  background-color: #393f4d;
+  color: #d4d4dc;
+  margin-top: 1rem;
+}
+main .jumbotron h1:hover,
+main .jumbotron p:hover {
+  color: #feda6a;
+}
+main .jumbotron .btn {
+  background-color: #feda6a;
+  border: none;
+  margin-top: 1.5rem;
+  color: #393f4d;
+}
+main .jumbotron .btn:hover {
+  border: 3px solid #d4d4dc;
+}
+main #article {
+  background: #1d1e22;
+  color: #d4d4dc;
+}
+main ul #li-top {
+  color: #feda6a;
+}
+main .list-group .list-group-item {
+  background-color: #393f4d;
+}
+main .list-group .list-group-item:hover {
+  color: #feda6a;
+}
+main #work-history-header {
+  color: #d4d4dc;
+}

@@ -4,19 +4,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -24,36 +92,172 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
+
+//media query variables
+
+
+
+/* color scheme 
+Are ya yellow: #feda6a
+
+Silver Fox: #d4d4dc
+
+Deep Matte Grey: #393f4d
+
+Dark Slate: #1d1e22 */
+
+// Color scheme
+@background-color: #1d1e22;
+@background-color2: #393f4d;
+@nav-color: #feda6a;
+@button-color: #feda6a;
+@about-me-color: #d4d4dc;
+
+//sizing
+@img-width: 400px;
+@img-height: 400px;
+
+//header colors
+@main-header-text: #d4d4dc;
+@common-header-text: #393f4d;
+
+//mix-ins
+.my-hover-mixin() {
+	&:hover {
+		border: 3px solid @main-header-text;
+	}
+}
+
+.my-hover-mixin2() {
+	&:hover {
+		color: @button-color;
+	}
+}
+
+
+
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: 'EB Garamond', serif;
+	background: @background-color;
+
+
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
 }
 
+
+
+main {
+	.nav {
+		display: flex;
+		justify-content: space-evenly;
+
+	}
+
+	a {
+		text-decoration: none;
+		color: @nav-color;
+	}
+
+	.jumbotron {
+		background-color: @background-color2;
+
+		img {
+			width: @img-width;
+			height: @img-height;
+			margin-top: 1rem;
+
+		}
+
+		h1,
+		p {
+			background-color: @background-color2;
+			color: @main-header-text;
+			.my-hover-mixin2();
+			margin-top: 1rem;
+
+		}
+
+		.btn {
+			background-color: @button-color;
+			border: none;
+			margin-top: 1.5rem;
+			color: @background-color2;
+			.my-hover-mixin();
+		}
+
+
+	}
+
+	#article {
+		background: @background-color;
+		color: @about-me-color;
+
+	}
+
+	ul #li-top {
+		color: @button-color;
+	}
+
+	.list-group .list-group-item {
+		background-color: @background-color2;
+		.my-hover-mixin2();
+	}
+
+	  #work-history-header {
+		color: @main-header-text;
+	}
+
+}
